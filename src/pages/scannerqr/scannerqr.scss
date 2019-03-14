@@ -1,0 +1,114 @@
+page-scannerqr {
+    .toolbar-title-md {
+        margin-left: -4px;
+        text-align: center;
+    }
+    .text-decor
+    {
+        width: 144px;
+        // height: 27px;
+        // overflow: hidden;
+        // text-overflow: ellipsis;
+        // white-space: nowrap;
+    }
+    .toolbar-title-ios {
+        text-align: center;
+    }
+    
+    .toolbar-background-md {
+        background: #48C8FB !important;
+
+    }
+    .toolbar-title-md {
+    color: #FFF
+    }
+    .used-decor{
+        font-size: 4.5rem;
+    width: 100%;
+    text-align: center;
+    padding: 5px;
+    }
+
+      .img-container {
+        background: linear-gradient(180deg, rgba(103, 226, 249, 5) 30%, rgba(103, 226, 249, 10) 3%, rgba(72, 200, 252, 1) 100%); 
+        position: relative;
+        height: 170px;
+        border-radius: 8px;
+    }
+    .div-location {
+        position: absolute;
+        top: 45%;
+        width:80%;
+        transform: translate(13%, -50%);
+    }
+    .item-md{
+     border-radius: 10px;
+   //  margin-top: 15px;
+    }
+    .item-ios{
+        border-radius: 15px;
+       // margin-top: 15px;
+       }
+       .item-block {
+        height: 3.5rem;
+        min-height: 3.5rem;
+        font-size:1.2rem;
+        }
+        .row-mtop{
+            margin-top: 12px; 
+        }
+        .col-12-title{
+            color:#FFF;
+            font-family: "Loto-Regular"
+        }
+
+        .div-parent{
+            width:100%;
+            //position:absolute;
+            margin-top:10px;
+            height: 90px;
+            border-bottom:1px solid #CCCCCC;
+        }
+        .div-left{
+          width:25%;
+          height:100%;
+          float:left;
+          padding:5px
+        }
+        .div-middle{
+            width:55%;
+            height:100%;
+            float:left;
+            padding-left: 5px;
+            padding-top:19px
+        }
+        .div-right{
+            width:20%;
+            height:100%;
+            float:right;
+            padding-top: 19px;  
+        }
+        .div-right-inner{
+           width:100%;
+           //margin:auto;
+           padding: 2px;
+           border-radius: 5px;
+           background-color:#F7941E; 
+        }
+        .p-text{
+        padding: 0px;
+        margin: 0px;
+        color:black;
+        }
+        .p-points-text{
+         text-align: center;
+         color:#FFF;
+         font-size: 1.4rem;
+        }
+        .icon-style{
+            font-size: 1.0rem;
+            padding-top: 5px;
+            color:black;
+            font-family: "Loto-Regular"
+        }
+}

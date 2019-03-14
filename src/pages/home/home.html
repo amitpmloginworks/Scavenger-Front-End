@@ -1,0 +1,219 @@
+<ion-header>
+  <ion-navbar color="button" hideBackButton>
+  <ion-buttons left>
+  <button ion-button menuToggle>
+  <ion-icon item-start>
+  <img width="25" item-left src="assets/icon/menu.png">
+  </ion-icon>
+  </button>
+  </ion-buttons>
+  <ion-title>Home</ion-title>
+  <ion-buttons right >
+  <button ion-button (click)="qrscan()">
+      <!-- <button ion-button (click)="addMarker()"> -->
+  <ion-icon item-start>
+  <img width="19" item-left src="assets/icon/qr.png">
+  </ion-icon>
+  </button>
+  </ion-buttons>
+  </ion-navbar>
+  </ion-header>
+  
+  
+  <ion-content padding>
+  <div style="width:100%;height:150px;border-radius:5px;">
+  <!-- <img src="assets/imgs/map.png" > -->
+  <div #map id="map"></div>
+  </div>
+  <ion-list style="margin-top:65px;">
+  <ion-label>Leadership Board</ion-label>
+  <ion-item>
+  <ion-row>
+  <ion-col col-3>
+  <img style="border-radius:10px;height:50px ;" width="50"  [src]="rankpic1"  onError="this.src='assets/imgs/map.png'">
+  </ion-col>
+  <ion-col col-5>
+  <p class="p-name" >{{rank1}}</p>
+  <!-- <p>Entrepreneur</p> -->
+  </ion-col>
+  <ion-col >
+  <ion-icon class="icon-style" item-start><img width="28" height="28" style="margin-right:3px;" src="assets/icon/cup.png"></ion-icon>
+  <p class="p-leader">Movido</p>
+  </ion-col>
+  </ion-row>
+  </ion-item>
+  
+  <ion-item style="border-left: 7px solid #79CE0B;">
+  <ion-row>
+  
+  <ion-col col-3>
+  <img style="border-radius:10px;height:50px " width="50" [src]="rankpic2" onError="this.src='assets/imgs/map.png'" >
+  </ion-col>
+  <ion-col col-5>
+  <p class="p-name" >{{rank2}}</p>
+  <!-- <p>Entrepreneur</p> -->
+  </ion-col>
+  <ion-col >
+  <ion-icon class="icon-style" item-start><img width="28" height="28" style="margin-right:3px;" src="assets/icon/leyenda.png"></ion-icon>
+  <p class="p-leader">Leyenda</p>
+  </ion-col>
+  </ion-row>
+  </ion-item>
+  
+  <ion-item style="border-left: 7px solid #FB9948;">
+  <ion-row>
+  
+  <ion-col col-3>
+  <img style="border-radius:10px;height:50px " width="50" [src]="rankpic3"  onError="this.src='assets/imgs/map.png'">
+  </ion-col>
+  <ion-col col-5>
+  <p class="p-name">{{rank3}}</p>
+  <!-- <p>Entrepreneur</p> -->
+  </ion-col>
+  <ion-col >
+  <ion-icon class="icon-style" item-start><img width="28" height="28" style=" margin-right: 3px;" src="assets/icon/primo.png"></ion-icon>
+  <p class="p-leader">Primo</p>
+  </ion-col>
+  </ion-row>
+  </ion-item>
+  
+  <ion-item style="border-left: 7px solid #E43260;">
+  <ion-row>
+  <ion-col col-3>
+  <img style="border-radius:10px;height:50px ;" width="50" [src]="rankpic4" onError="this.src='assets/imgs/map.png'">
+  </ion-col>
+  <ion-col col-5>
+  <p class="p-name">{{rank4}}</p>
+  <!-- <p>Entrepreneur</p> -->
+  </ion-col>
+  <ion-col >
+  <ion-icon class="icon-style" item-start><img width="28" height="28" style="margin-right: 3px;" src="assets/icon/coins.png"></ion-icon>
+  <p class="p-leader">Jefe</p>
+  </ion-col>
+  </ion-row>
+  </ion-item>
+  </ion-list>
+  <ion-label style="margin-top:30px;">Active Scavenger Hunts</ion-label>
+  
+  <ion-list class="list-style" >
+      <ion-scroll scrollY style="height:200px;">
+  <ion-row class="row-style" *ngFor="let value of datapins">
+  <ion-col col-7>
+  <p>{{value.location}}</p>
+  </ion-col>
+  <ion-col col-5 style=" border-bottom:1px solid #D6D6D6;" >
+  <p style="text-align: right;">{{value.points}}points</p>
+  </ion-col>
+  <!-- <ion-col col-7>
+  <p>Barber Shop</p>
+  </ion-col>
+  <ion-col col-5 style="border-bottom:1px solid #D6D6D6;">
+  <p>50 points</p>
+  </ion-col>
+  <ion-col col-7 style="border-bottom:0px solid #FFF">
+  <p>National Monuments</p>
+  </ion-col>
+  <ion-col col-5 style="border-bottom:0px solid #FFF">
+  <p>1k points</p>
+  </ion-col> -->
+  </ion-row>
+</ion-scroll>
+  </ion-list>
+ 
+
+  <ion-label style="margin-top:30px;">Points Total/Completed Scavenger Hunts </ion-label>
+  <ion-slides slidesPerView="2.2">
+  <!-- <div class="div-parent">
+  <ion-slide>
+  <div class="div-child">
+  <img style="border-radius:15px" width="70" src="assets/imgs/person.jpg" >
+  <div class="div-child-inner">
+  <div class="div-left">
+  <p class="p-event">Water Park</p>
+  <ion-icon style="margin:0px;font-size:1.0rem;margin-left: 10px;color:#FFF" item-start><img width="2" height="1" src="assets/icon/blue_location.png">New york</ion-icon>
+  </div>
+  <div class="div-right">
+  <button ion-button class="btn-style">100k points</button>
+  </div>
+  
+  </div>
+  </div>
+  
+  <div class="div-child" >
+  <img style="border-radius:10px" width="70" src="assets/imgs/person.jpg" >
+  <div class="div-child-inner">
+  <div class="div-left">
+  <p class="p-event">Water Park</p>
+  <ion-icon style="margin:0px;font-size:1.0rem;margin-left: 10px;color:#FFF" item-start><img width="2" height="1" src="assets/icon/blue_location.png">New york</ion-icon>
+  </div>
+  <div class="div-right">
+  <button ion-button class="btn-style">100k points</button>
+  </div>
+  
+  </div>
+  </div>
+  
+  <div class="div-child">
+  <img style="border-radius:10px" width="70" src="assets/imgs/person.jpg" >
+  <div class="div-child-inner">
+  <div class="div-left">
+  <p class="p-event">Water Park</p>
+  <ion-icon style="margin:0px;font-size:1.0rem;margin-left: 10px;color:#FFF" item-start><img width="2" height="1" src="assets/icon/blue_location.png">New york</ion-icon>
+  </div>
+  <div class="div-right">
+  <button ion-button class="btn-style">100k points</button>
+  </div>
+  
+  </div>
+  </div>
+  </ion-slide>
+  </div> -->
+  <ion-slide *ngFor="let value of datahunt">
+  <ion-card *ngIf="value.listplaces">
+  <img class="img-style" [src]="value.listplaces.ImageUrl"/>
+  <div class="card-title">
+  <div class="div-left-title">
+  <p class="p-event">{{value.listplaces.PlaceType}}</p>
+  <ion-icon class="icon-loc" item-start><img style="padding-right: 4px" src="assets/icon/blue_location.png">New york</ion-icon>
+  </div>
+  <div class="div-right-title">
+  <button ion-button class="btn-style">{{value.listplaces.points}} points</button>
+  </div>
+  </div>
+  
+  </ion-card>
+  </ion-slide>
+  <!-- <ion-slide>
+  <ion-card>
+  <img class="img-style" src="assets/imgs/jungle-large.png"/>
+  <div class="card-title">
+  <div class="div-left-title">
+  <p class="p-event">Water Park</p>
+  
+  <ion-icon class="icon-loc" item-start><img style="padding-right: 4px" width="10" height="10" src="assets/icon/blue_location.png">New york</ion-icon>
+  </div>
+  <div class="div-right-title">
+  <button ion-button class="btn-style">1k points</button>
+  </div>
+  </div>
+  </ion-card>
+  </ion-slide> -->
+  <!-- <ion-slide>
+  <ion-card>
+  <img class="img-style" src="assets/imgs/smassh-large.png"/>
+  <div class="card-title">
+  <div class="div-left-title">
+  <p class="p-event">Water Park</p>
+  
+  
+  <ion-icon class="icon-loc" item-start><img style="padding-right: 4px" width="10" height="10" src="assets/icon/blue_location.png">New york</ion-icon>
+  </div>
+  <div class="div-right-title">
+  <button ion-button class="btn-style">1k points</button>
+  </div>
+  </div>
+  
+  </ion-card>
+  </ion-slide> -->
+  </ion-slides>
+  </ion-content>

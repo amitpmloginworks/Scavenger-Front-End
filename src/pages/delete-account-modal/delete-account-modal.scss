@@ -1,0 +1,51 @@
+page-delete-account-modal {
+
+        .content-md{   
+            background-color: rgba(0,0,0,0.5);
+        }
+     
+        .outer-div{
+            position: relative;
+            background: #fff;
+            text-align: center;
+            border-radius:5px;
+            top: 55%;
+            height: 25%;
+            width:70%;
+            margin: auto;
+            transform: perspective(1px) translateY(-50%);
+        }
+   
+    
+       .scroll-content{
+        padding: 15px !important;  
+        }
+    
+        .button-md {
+            display: flex;   
+            color: white;
+            background-color:rgba(39, 202, 251, 1);
+            margin: auto ! important;
+            margin-top:15px ! important;
+            border-radius: 7px;
+            height:3.5rem;
+            width: 30%;
+        }
+        .button-ios {
+          display: flex;    
+          color: white;
+          background-color:rgba(39, 202, 251, 1);
+          margin: auto ! important;
+          margin-top:15px ! important;
+          border-radius: 7px;
+          height:3.5rem;
+          width: 30%;
+      }
+
+      .p-delete{
+          font-family: Loto-Regular;
+          padding-top: 22px;
+          font-size: 1.6rem;
+      }
+    }
+    

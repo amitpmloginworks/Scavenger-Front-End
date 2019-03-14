@@ -1,0 +1,67 @@
+<ion-menu [content]="content">
+
+    <ion-content>
+        <div class="img-container">
+            <img style="display: block;  width: 100%;" src="assets/imgs/bg_banner.png">
+            <div class="top-right">
+                <img width="25" style="display: block;" src="assets/icon/menu_reverse.png">
+            </div>
+            <div class="centered">
+                <!-- <img width="90" style="display: block;" src="assets/imgs/logo_sign_in.png"> -->
+                <img width="90" style="display: block;
+                height: 71px;
+                width: 71px;
+                border-radius: 50px;
+                margin-bottom: 12px;" [src]="imageprofilepic" >
+                <p style="margin-top:-5px;color:white;text-align: center">{{username}}</p>
+                <!-- <p style="margin-top:-15px">
+                        <span >Entrepreneur</span>
+                        <span style="padding-left: 3px;">World Traveller</span>
+                </p> -->
+                <!-- <p >EntrePreneur</p>   -->
+            </div>
+        </div>
+
+        <ion-list lines>
+            <button ion-item *ngFor="let p of pages;let i=index" (click)="openPage(p)">
+                <img src="{{p.logo}}" style="margin-bottom: -3px;  width: 25px !important;margin-right: 20px;width: 30px;">{{p.title}}
+            </button>
+        </ion-list>
+    </ion-content>
+    <style>
+        .input-wrapper {
+            border-bottom: 1px solid #545454 !important;
+        }
+        .img-container {
+            position: relative;
+            height: 145px;
+            background: linear-gradient(180deg, rgba(103, 226, 249, 5) 30%, rgba(103, 226, 249, 10) 3%, rgba(72, 200, 252, 1) 100%); 
+        }
+        .top-right {
+            position: absolute;
+            top: 15px;
+            right: 16px;
+        }
+        .centered {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            text-align: -webkit-center;
+            transform: translate(-50%, -50%);
+        }
+        p span:not(:first-child){
+        border-left:1px solid #FFF;
+    }
+    span{
+        padding:0 1px;
+        font-size: 0.8rem;
+        color:#FFF;
+        text-align:center;
+
+    }
+    .item-wrapper:last-child .item-inner {
+        border-bottom: 1px solid #dedede ! important;
+}
+    </style>
+</ion-menu>
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>

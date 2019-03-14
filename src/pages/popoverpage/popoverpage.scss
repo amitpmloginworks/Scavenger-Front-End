@@ -1,0 +1,52 @@
+page-popoverpage {
+    .img-container {
+        background: linear-gradient(180deg, rgba(103, 226, 249, 5) 30%, rgba(103, 226, 249, 10) 3%, rgba(72, 200, 252, 1) 100%); 
+        position: relative;
+        height: 170px;
+        border-radius: 8px;
+    }
+    .img-top{
+        position: absolute;
+        top: 0%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .profile-image
+    {
+        display: block;
+    height: 71px;
+    width: 71px;
+    border-radius: 50px;
+    margin-top: 53px;
+    box-shadow: 0 10px 30px -12px rgba(0,0,0,.42), 0 4px 25px 0 rgba(0,0,0,.12), 0 8px 10px -5px rgba(0,0,0,.2);
+    }
+    .div-name{
+        position: absolute;
+        top: 29%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .p-name{
+        color:#FFF;
+        font-family: Loto-Regular;
+        font-size: 1.4rem;
+        margin-top: 58px;
+       }
+       .div-points{
+        position: absolute;
+        top:79%;
+        margin:auto;
+        left: 50%;
+        text-align: center;
+        width:80%;
+        transform: translate(-50%, -50%);   
+    }
+    .p-points{
+        color: #fffc00;
+        font-size: 1.3rem;
+
+    }
+    .label-md {
+        margin: -2px 7px 4px 0px;
+    }
+}

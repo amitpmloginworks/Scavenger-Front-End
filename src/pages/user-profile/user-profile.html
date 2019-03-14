@@ -1,0 +1,166 @@
+<!--
+  Generated template for the UserProfilePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar color="button" hideBackButton>
+    <ion-buttons left>
+      <button ion-button menuToggle>
+        <ion-icon item-start>
+          <img width="25" item-left src="assets/icon/menu.png">
+        </ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title>User Profile</ion-title>
+
+    <ion-buttons right >
+      <button ion-button (click)="qrscan()" >
+        <ion-icon item-start>
+          <img width="19" item-left src="assets/icon/qr.png" >
+        </ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+  <div class="img-container">
+    <img style="display: block;  width: 100%;height:100%" src="assets/imgs/bg_banner.png">
+    <div class="img-top">
+      <img class="profile-image" width="80" [src]="userimage">
+    </div>
+    <div class="div-name">
+      <p class="p-name">{{username}}</p>
+    </div>
+ 
+    <div class="div-points">
+      <div class="div-designation-left">
+        <ion-label>Ranking</ion-label>
+        <ion-label class="p-points">{{ranking}}</ion-label>
+
+      </div>
+      <div class="div-designation-right">
+        <ion-label>Move Points</ion-label>
+        <ion-label class="p-points">{{points}}</ion-label>
+      </div>
+    </div>
+  </div>
+
+  <div class="div-outer">
+    <div id="browseOtherProfiles" class="div-inner" (click)="browseOtherProfiles()" >
+      <p id='text-browseOtherProfiles' class="p-signin">Browse Other Profiles</p>
+    </div>
+
+    <div id="browseCategories" class="div-signup" (click)="browseCategories()" >
+      <p id='text-browseCategories' class="p-signin" style="color:#FFF">Browse Categories</p>
+    </div>
+  </div>
+  <ion-item *ngIf="browseState==0">
+    <ion-icon item-right name="search"></ion-icon>
+    <!--<input  class="input-place" placeholder="Search Profile" type="text" >-->
+    <ion-searchbar [(ngModel)]="searchterm" [formControl]="searchControl" (ionInput)="onSearchInput()"></ion-searchbar>
+    </ion-item>
+ <div *ngIf="searching" class="spinner-container">
+        <ion-spinner></ion-spinner>
+    </div>
+  <ion-grid *ngIf="browseState==0">
+    <ion-row>
+      <ion-col col-6 *ngFor="let value of otherprofile;let i=index" (click)="popupdetail(i)">
+        <img width="130"  style="border-radius:15px;height: 108px;" [src]="value.profile_pic">
+        <div class="div-person-name">
+            <p class="p-person-name">{{value.name}}</p>
+        </div>
+    
+      </ion-col>
+
+    </ion-row>
+  </ion-grid>
+
+
+  <div  *ngIf="browseState==1" >
+    <div  *ngFor="let value of huntcategory">
+<div class="div-parent" *ngIf="value.listplaces!=null">
+<div class="div-left" >
+<img style="border-radius:15px;height: 70px;" width="80" [src]="value.listplaces.ImageUrl" >
+</div>
+<div class="div-middle" >
+<p class="p-text" style="font-size:1.4rem">{{value.listplaces.name}}</p>
+
+     <div class="text-decor">
+      <ion-icon class="icon-style" item-start><img width="20" src="assets/icon/theme.png"> {{value.listplaces.PlaceType}}</ion-icon>
+      <ion-icon class="icon-style" item-start><img width="10" src="assets/icon/blue_location.png"> </ion-icon>
+      <p style="display: inline;
+      font-size: .9rem;">{{value.listplaces.location}}</p>
+          </div>
+
+</div>
+<div class="div-right" >
+  <div class="div-right-inner" >
+    <p class="p-text p-points-text" style="font-size:1.1rem">Points</p>
+    <p class="p-text p-points-text" style="font-style:bold">{{value.listplaces.points}}K</p>
+  </div>
+  </div>
+  </div>
+    </div>
+  </div>
+
+  <!--<div class="div-parent" *ngIf="browseState==1">
+      <div class="div-left" >
+      <img style="border-radius:15px" width="80" src="assets/imgs/jungle.png" >
+      </div>
+      <div class="div-middle" >
+      <p class="p-text" style="font-size:1.4rem">Jungle Retreat</p>
+    <div style="width:10%;float:left">
+      <ion-icon class="icon-style" item-start><img width="20" style="margin-right: 2px;" src="assets/icon/theme.png"></ion-icon>
+    </div>
+    <div class="div-location-type">
+    Jungle
+    </div>
+    <div style="width:8%;float:left;">
+       <ion-icon class="icon-style" style="padding-left:3px" item-start><img width="10"  style="margin-right: 2px;"src="assets/icon/blue_location.png"></ion-icon>
+    </div>
+    <div class="div-location-place">
+      Orlando, New york
+    </div>
+    
+      </div>
+      <div class="div-right" >
+        <div class="div-right-inner" >
+          <p class="p-text p-points-text" style="font-size:1.1rem">Points</p>
+          <p class="p-text p-points-text" style="font-style:bold">100K</p>
+        </div>
+        </div>
+        </div>-->
+
+        <!--<div class="div-parent" *ngIf="browseState==1" >
+            <div class="div-left" >
+            <img style="border-radius:15px" width="80" src="assets/imgs/smassh.png" >
+            </div>
+            <div class="div-middle" >
+            <p class="p-text" style="font-size:1.4rem">Smassh</p>
+            <div style="width:10%;float:left">
+              <ion-icon class="icon-style" item-start><img width="20" style="margin-right: 2px;" src="assets/icon/theme.png"></ion-icon>
+            </div>
+            <div class="div-location-type">
+            Jungle
+            </div>
+            <div style="width:8%;float:left;">
+               <ion-icon class="icon-style" style="padding-left:3px" item-start><img width="10"  style="margin-right: 2px;"src="assets/icon/blue_location.png"></ion-icon>
+            </div>
+            <div class="div-location-place">
+              Orlando, New york
+            </div>
+
+            </div>
+            <div class="div-right" >
+              <div class="div-right-inner" >
+                <p class="p-text p-points-text" style="font-size:1.1rem">Points</p>
+                <p class="p-text p-points-text" style="font-style:bold">100K</p>
+              </div>
+              </div>
+              </div>-->
+              <loadingdemo *ngIf="loadingdisplay==true" ></loadingdemo>  
+</ion-content>

@@ -1,0 +1,49 @@
+<!--
+  Generated template for the EditProfilePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="button" hideBackButton>
+    <ion-buttons left>
+      <button ion-button icon-only menuToggle="left">
+        <ion-icon item-start>
+          <img width="25" item-left src="assets/icon/menu.png">
+        </ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title style="margin-left: -65px;">Edit Profile</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+  <img (click)="uploadpicture()" style="border-radius: 50%;
+  height: 122px;" width="120" [src]="profilepic" class="center">
+  <div class="profile-image">
+  <img style="height: 22px;" src="assets/imgs/add.png">
+</div>
+  <progress-bar *ngIf="loadactive==true" [progress]="loadProgress"></progress-bar>
+  <p class="p-change">Change Profile Picture</p>
+  <ion-item>
+    <ion-label>
+      <ion-icon name="person"></ion-icon>
+    </ion-label>
+    <ion-input [(ngModel)]="userName" placeholder="Name" type="text"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>
+      <ion-icon name="key"></ion-icon>
+    </ion-label>
+    <ion-input [(ngModel)]="password" placeholder="Password" type="password"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>
+      <ion-icon name="mail"></ion-icon>
+    </ion-label>
+    <ion-input [(ngModel)]="email" placeholder="Email Address" type="email"></ion-input>
+  </ion-item>
+  <button ion-button (click)="update()">Update</button>
+</ion-content>

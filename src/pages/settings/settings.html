@@ -1,0 +1,33 @@
+<!--
+  Generated template for the SettingsPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar color="button" hideBackButton>
+    <ion-buttons left>
+      <button ion-button (click)="openLeftMenu()" menuToggle>
+        <ion-icon item-start>
+          <img width="25" item-left src="assets/icon/menu.png">
+        </ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title>Settings</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+  <!-- <ion-item>
+    <ion-label>Disable Like and Comment</ion-label>
+    <ion-checkbox [(ngModel)]="like"></ion-checkbox>
+  </ion-item> -->
+
+  <ion-item>
+    <ion-label>Delete Account</ion-label>
+    <!-- <ion-checkbox [(ngModel)]="deleteAccount"></ion-checkbox> -->
+  </ion-item>
+  <button ion-button (click)="submitBtn()">Submit</button>
+
+</ion-content>

@@ -1,0 +1,65 @@
+<!--
+  Generated template for the SignupPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<!-- <ion-header>
+
+  <ion-navbar>
+    <ion-title>signup</ion-title>
+  </ion-navbar>
+
+</ion-header> -->
+
+
+<ion-content padding>
+  <img width="120" src="assets/imgs/logo_sign_in.png"  class="center">
+
+<div class="div-outer">
+<div class="div-inner">
+<p  class="p-signin">Sign in</p>
+</div>
+
+<div style="float:right;background-color:#FFF;width: 50%;height:100%;border-radius:20px">
+<p class="p-signin" style="color:#27CAFB">Sign up</p>
+</div>
+</div>
+<img width="60" src="assets/imgs/add_pic.png"  class="img-profile">
+<p class="p-add">Add Profile Picture</p>
+
+<ion-list>
+
+  <ion-item>
+      <ion-label><ion-icon name="person"></ion-icon></ion-label>
+      <ion-input [(ngModel)]="userName" placeholder="Username / Email Address" type="text" ></ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-label><ion-icon name="person"></ion-icon></ion-label>
+        <ion-input [(ngModel)]="name" placeholder="Name" type="text" ></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label><ion-icon name="person"></ion-icon></ion-label>
+        <ion-input [(ngModel)]="surname" placeholder="Surname" type="text" ></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label><ion-icon name="key"></ion-icon></ion-label>
+        <ion-input [(ngModel)]="password" placeholder="Password" type="password" ></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label><ion-icon name="mail"></ion-icon></ion-label>
+        <ion-input [(ngModel)]="email" placeholder="Email Address" type="email" ></ion-input>
+      </ion-item>
+      
+      <!-- <ion-row>
+        <ion-col>
+          <p  class='p-forgot'>Forgot Password?</p>
+        </ion-col>
+      </ion-row> -->
+    </ion-list>
+
+
+<button ion-button>sign up</button>
+
+   
+</ion-content>

@@ -1,0 +1,42 @@
+<!--
+  Generated template for the PopoverpagePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<!-- <ion-header>
+
+  <ion-navbar>
+    <ion-title>popoverpage</ion-title>
+  </ion-navbar>
+
+</ion-header> -->
+
+
+<ion-content padding>
+    <ion-icon (click)="close()" style="position: absolute;
+    z-index: 1000;
+    top: 5px;
+    right: 7px;" name="close-circle"></ion-icon>
+  <div class="img-container">
+    <img style="display: block;  width: 100%;height:100%" src="assets/imgs/bg_banner.png">
+    <div class="img-top">
+      <img class="profile-image" width="80" [src]="image">
+    </div>
+    <div class="div-name">
+      <p class="p-name">{{name}}</p>
+    </div>
+ 
+    <div class="div-points">
+      <div class="div-designation-left">
+        <ion-label>Ranking</ion-label>
+        <ion-label class="p-points">{{ranking}}</ion-label>
+
+      </div>
+      <div class="div-designation-right">
+        <ion-label>Move Points</ion-label>
+        <ion-label class="p-points">{{totalpoints}}</ion-label>
+      </div>
+    </div>
+  </div>
+</ion-content>

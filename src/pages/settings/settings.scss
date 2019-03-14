@@ -1,0 +1,57 @@
+page-settings {
+    .toolbar-title-md {
+        text-align: center;
+    }
+    .toolbar-title-ios {
+        text-align: center;
+    }
+
+    .checkbox-md .checkbox-checked {
+        border-color: #545454;
+        background-color: #FFF;
+}
+.checkbox-ios .checkbox-checked {
+    border-color: #545454;
+    background-color: #FFF;
+}
+.checkbox-checked .checkbox-inner {
+    border-color:#48C8FB ! important;
+}
+.button-md {
+    display: flex;   
+    color: white;
+    background-color:rgba(39, 202, 251, 1);
+    margin: auto ! important;
+    margin-top:25px ! important;
+    border-radius: 7px;
+    height:4.2rem;
+    width: 45%;
+}
+.button-ios {
+  display: flex;    
+  color: white;
+  background-color:rgba(39, 202, 251, 1);
+  margin: auto ! important;
+  margin-top:25px ! important;
+  border-radius: 7px;
+  height:4.2rem;
+  width: 45%;
+}
+.label-md {
+    color:#545454;
+}
+.label-ios {
+    color:#545454;
+}
+.list-md {
+    margin: 0px;
+    border-bottom: 1px solid #545454;
+}
+.list-ios {
+    margin: 0px;
+    border-bottom: 1px solid #545454;
+}
+ion-navbar[hidebackbutton] button[menutoggle] {
+    display: block !important;
+  }
+}

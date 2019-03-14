@@ -1,0 +1,354 @@
+page-user-profile {
+    .toolbar-title-md {
+        text-align: center;
+        margin-left: 0px;
+        font-family: Loto-Regular;
+    }
+    .toolbar-title-ios {
+        text-align: center;
+    }
+    .profile-image
+    {
+        display: block;
+    height: 71px;
+    width: 71px;
+    border-radius: 50px;
+ 
+    box-shadow: 0 10px 30px -12px rgba(0,0,0,.42), 0 4px 25px 0 rgba(0,0,0,.12), 0 8px 10px -5px rgba(0,0,0,.2);
+    }
+    ion-navbar[hidebackbutton] button[menutoggle] {
+        display: block !important;
+      }
+      .img-container {
+        background: linear-gradient(180deg, rgba(103, 226, 249, 5) 30%, rgba(103, 226, 249, 10) 3%, rgba(72, 200, 252, 1) 100%); 
+        position: relative;
+        height: 121px;
+        top: 40px;
+        border-radius: 8px;
+    }
+    .searchbar-md .searchbar-search-icon {
+   display:none !important
+    }
+    .searchbar-md {
+   padding:0px ;
+   margin-top: -10px;
+    }
+    .top-right {
+        position: absolute;
+        top: 15px;
+        right: 16px;
+    }
+    .centered {
+        position: absolute;
+        top: 45%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .img-top{
+        position: absolute;
+        top: 0%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .div-name{
+        position: absolute;
+        top: 43%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .p-name{
+     color:#FFF;
+     font-family: Loto-Regular;
+     font-size: 1.4rem;
+    }
+    .div-designation{
+        position: absolute;
+        width:57% ! important;
+        top:39%;
+        margin:auto;
+        left: 51%;
+        text-align: center;
+        transform: translate(-50%, -50%);
+    }
+    
+    .div-designation-left{
+        border-right: 1px solid #FFF;
+        width:50%;
+        height:100%;
+        float:left;
+        
+    }
+    .div-designation-right{
+        width:50%;
+        height:100%;
+        float:right;
+        
+    }
+    .p-designation{
+        color: white;
+        display:inline;
+        font-size: 1.1rem;
+        font-family: Loto-Regular;
+    }
+    .div-description{
+        position: absolute;
+        top:53%;
+        margin:auto;
+        left: 50%;
+        text-align: center;
+        width:90%;
+        transform: translate(-50%, -50%); 
+    }
+    .p-description{
+        color: white;
+        //display:inline;
+        font-family: Loto-Regular;
+        font-size: 1.0rem; 
+    }
+    .div-points{
+        position: absolute;
+        top:79%;
+        margin:auto;
+        left: 50%;
+        text-align: center;
+        width:80%;
+        transform: translate(-50%, -50%);   
+    }
+    .label-md {
+        margin:0px;
+        margin-top:5px;
+        color:#FFF;
+        font-family: Loto-Regular;
+        font-size: 1.2rem;
+    }
+    .p-points{
+        color: #fffc00;
+        font-size: 1.3rem;
+
+    }
+    .div-outer{
+        background-color: #F7941E;
+        width: 90%;
+       height:40px;
+        margin:auto;
+        padding:2px;
+        border-radius:20px;
+        display:block;
+        overflow: hidden;
+        margin-top: 60px;
+    }
+    .div-inner{
+        float:left;
+        background-color: #FFF;
+        width: 50%;
+    height: 100%;
+    display:block;
+    overflow: hidden;
+        border-radius:20px;
+    }
+    .div-signup{
+        float:right;
+        background-color: #F7941E;
+        width: 50%;
+        height:100%;
+        border-radius:20px
+    } 
+    .p-signin{
+        color:#F7941E;
+        text-align: center;
+        font-size: 1.2rem;
+        margin-top: 11px;
+    }
+    .item-md {
+        border: 1px solid #B4B4B4;
+        border-radius: 10px;
+        margin: auto;
+        width: 80%;
+        margin-top: 10px;
+        height:0px;
+    }
+    .item-ios {
+        border: 1px solid #B4B4B4;
+        border-radius: 10px;
+        margin: auto;
+        width: 80%;
+        margin-top: 10px;
+        height:0px;
+    }
+    ion-icon {
+        color: #B4B4B4;
+    }
+    [col-6] {
+        text-align: center;
+       padding: 7px;
+    }
+    .row{
+        padding:10px;
+    }
+     .icon-style{
+            font-size: 1.0rem;
+            padding-top: 5px;
+            color:black;
+            font-family: "Loto-Regular"
+        }
+  .text-decor
+    {
+        width: 144px;
+        height: 27px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+    .p-person-name{
+	    display: inline-table;
+       vertical-align:middle;
+       line-height:100%;
+       color:#FFF;
+    //    margin-top: 38px;
+     margin-top: 15px;
+       font-family: "Loto-Regular"
+      
+    }
+    .div-person-name{
+        position: absolute;
+	    top: 5px; right: 0;
+	    bottom: 0; left: 0;
+	    text-align: center;
+       vertical-align:middle;
+       line-height:185px;
+       font-family: "Loto-Regular"
+    }
+    p span:not(:first-child){
+        border-left:1px solid #FFF;
+    }
+    span{
+        padding:0 3px;
+        font-size: 0.8rem;
+    }
+    .div-person-designation{
+        position: absolute;
+	    top: 4px; right: 0;
+	    bottom: 0; left: 0;
+	    text-align: center;
+       vertical-align:middle;
+       line-height:215px;
+    }
+    .item-block {
+    min-height:3.5rem;
+    }
+    .div-parent{
+            width:100%;
+            //position:absolute;
+            margin-top:10px;
+            height: 90px;
+            border-bottom:1px solid #CCCCCC;
+        }
+         .spinner-container {
+        width: 100%;
+        text-align: center;
+        padding: 10px;
+    }
+    .div-left{
+      width:25%;
+      height:100%;
+      float:left;
+      padding-right:5px;
+      //padding:5px
+    }
+    .div-middle{
+        width:55%;
+        height:100%;
+        float:left;
+        padding-left: 5px;
+        padding-top:19px
+    }
+    .div-right{
+        width:20%;
+        height:100%;
+        float:right;
+        padding-top: 22px;  
+    }
+    .div-right-inner{
+       width:100%;
+       //margin:auto;
+       padding: 2px;
+       border-radius: 5px;
+       background-color:#F7941E; 
+    }
+    .p-text{
+    padding: 0px;
+    margin: 0px;
+    color:black;
+    font-family: "Loto-Regular"
+    }
+    .p-points-text{
+     text-align: center;
+     color:#FFF;
+     font-size: 1.4rem;
+     font-family: "Loto-Regular"
+    }
+    .icon-style{
+        font-size: 1.0rem;
+        padding-top: 5px;
+      
+    color: #4a4a4a;
+        font-family: "Loto-Regular"
+    }
+    .text-input::-webkit-input-placeholder {
+       
+        
+       font-style: italic;
+       font-family: "Loto-Regular";
+ 
+       
+      }
+      .text-input-md{
+        color: #B4B4B4;
+        font-style: italic;
+        font-family: "Loto-Regular";
+        padding-top:-7px;
+        font-weight:100;
+        font:italic ! important;
+      }
+      .div-location-type{
+        width:25%;
+        float:left;
+        font-size:1.0rem;
+        padding-left:5px;
+        margin-top:4px
+      }
+      .div-location-place{
+        width:57%;
+        float:left;
+        font-size:1.0rem;
+        padding-left:3px;
+        
+        margin-top:5px  
+      }
+
+      .input-place
+{
+border: none;
+margin-left: -8px;
+position: absolute;
+font-style:italic;
+margin-top: -11px;
+font-family: "Loto-Regular";
+} input::placeholder {
+color: #C5C3C5;
+} .text-input-md{
+// color: #B4B4B4;
+// font-style: italic;
+font-family: "Loto-Regular";
+// padding-top:-7px;
+// font-weight:100;
+font:italic ! important;
+
+font-size: 12.4px;
+margin-left: -8px;
+z-index: 1;
+position: absolute;
+margin-top: -8px;
+}
+    }

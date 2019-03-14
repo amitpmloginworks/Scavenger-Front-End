@@ -1,0 +1,113 @@
+<!--
+  Generated template for the LoginPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<!-- <ion-header>
+
+  <ion-navbar>
+    <ion-title>login</ion-title>
+  </ion-navbar>
+
+</ion-header> -->
+
+
+<ion-content padding>
+
+
+  <img width="120" src="assets/imgs/logo_sign_in.png" class="center">
+
+  <div class="div-outer">
+    <div id="signin" class="div-inner" (click)="signin()">
+      <p id='text-signin' class="p-signin">Sign in</p>
+    </div>
+
+    <div id="signup" class="div-signup" (click)="signup()">
+      <p id='text-signup' class="p-signin" style="color:#27CAFB">Sign up</p>
+    </div>
+
+
+  </div>
+  <div *ngIf="signinState==1">
+
+    <ion-list>
+
+      <ion-item>
+        <ion-label>
+          <ion-icon name="person"></ion-icon>
+        </ion-label>
+        <ion-input [(ngModel)]="loginEmail" placeholder="Email Address" type="text"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>
+          <ion-icon name="key"></ion-icon>
+        </ion-label>
+        <ion-input [(ngModel)]="loginPassword" placeholder="Password" type="password"></ion-input>
+      </ion-item>
+
+
+      <ion-row>
+        <ion-col>
+          <p class='p-forgot' (click)="forgetpassword()" >Forgot Password?</p>
+        </ion-col>
+      </ion-row>
+    </ion-list>
+
+
+    <button  (click)="login()" ion-button>sign in</button>
+
+  </div>
+
+
+  <div *ngIf="signinState==0">
+    <img width="60" [src]="profilepic" class="img-profile" (click)="uploadpicture()">
+    <progress-bar *ngIf="loadactive==true" [progress]="loadProgress"></progress-bar>
+    <p class="p-add">Add Profile Picture</p>
+    <form [formGroup]="signUpForm">
+    <ion-item>
+      <ion-label>
+        <ion-icon name="person"></ion-icon>
+      </ion-label>
+      <ion-input [class.invalid]="!signUpForm.controls.userName.valid && (signUpForm.controls.userName.dirty || submitAttempt)" formControlName="userName" placeholder="Username" type="text"></ion-input>
+    </ion-item>
+   <div *ngIf="!signUpForm.controls.userName.valid  && (signUpForm.controls.userName.dirty || submitAttempt)">
+     <p class="error-text">Please enter a valid userName.</p>
+   </div>
+    <ion-item>
+      <ion-label>
+        <ion-icon name="person"></ion-icon>
+      </ion-label>
+      <ion-input  formControlName="FirstName" placeholder="Name" type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>
+        <ion-icon name="person"></ion-icon>
+      </ion-label>
+      <ion-input formControlName="Surname" placeholder="Surname" type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>
+        <ion-icon name="key"></ion-icon>
+      </ion-label>
+      <ion-input  [class.invalid]="!signUpForm.controls.password.valid && (signUpForm.controls.password.dirty || submitAttempt)" formControlName="password" placeholder="Password" type="password"></ion-input>
+    </ion-item>
+     <div *ngIf="!signUpForm.controls.password.valid  && (signUpForm.controls.password.dirty || submitAttempt)">
+     <p class="error-text">Password Should be Six characters including one uppercase letter, one special character and alphanumeric characters .</p>
+   </div>
+    <ion-item>
+      <ion-label>
+        <ion-icon name="mail"></ion-icon>
+      </ion-label>
+      <ion-input [class.invalid]="!signUpForm.controls.email.valid && (signUpForm.controls.email.dirty || submitAttempt)" formControlName="email" placeholder="Email Address" type="email"></ion-input>
+    </ion-item>
+    <div *ngIf="!signUpForm.controls.email.valid  && (signUpForm.controls.email.dirty || submitAttempt)">
+                    <p class="error-text">Please enter a valid Email.</p>
+    </div>
+    </form>
+    <button [disabled]="!signUpForm.valid" (click)="SignUp()"  style="margin-top:10px ! important" ion-button>sign up</button>
+  </div>
+
+</ion-content>
+
+

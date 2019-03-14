@@ -1,0 +1,152 @@
+loadingdemo {
+.fakeItem {
+  h2, h3, p {
+    // background-color: lightgrey;
+    -webkit-animation: infinite bgcolorchange 4s;
+     animation: 1.8s infinite bgcolorchange;
+    opacity: 0.5;
+    height: 1em;
+    margin-top: 5px;
+
+  }
+
+  h2 {
+    width: 35%;
+  }
+
+  h3 {
+    width: 40%;
+  }  
+
+  p {
+    width: 60%;
+  }
+}
+// .animate-skeleton-background {
+//     -webkit-animation: infinite bgcolorchange 4s;
+//     animation: 4s infinite bgcolorchange;
+//     opacity: 0.5;
+//     }
+    
+    @keyframes bgcolorchange {
+    0% {
+    color: #f2f2f2;
+    }
+    25% {
+    background: lightgray;
+    }
+    50% {
+    background: #f2f2f2;
+    }
+    75% {
+    background: lightgray;
+    }
+    100% {
+    background-color: #f2f2f2;
+    }
+    }
+    
+    @-webkit-keyframes bgcolorchange {
+    0% {
+    background: #f2f2f2;
+    }
+    25% {
+    background: lightgray;
+    }
+    50% {
+    background: #f2f2f2;
+    }
+    75% {
+    background: lightgray;
+    }
+    100% {
+    background: #f2f2f2;
+    }
+}
+.div-parent{
+    width:100%;
+    //position:absolute;
+    margin-top:5px;
+    height: 90px;
+    // border-bottom:1px solid #CCCCCC;
+}
+.div-left{
+  width:25%;
+  height:100%;
+  float:left;
+  padding:5px
+}
+.div-middle{
+    width:55%;
+    height:100%;
+    float:left;
+    padding-left: 5px;
+    padding-top:19px
+}
+.div-right{
+    width:20%;
+    height:100%;
+    float:right;
+    padding-top: 19px;  
+}
+.div-right-inner{
+   width:100%;
+   //margin:auto;
+   height: 31px;
+   padding: 2px;
+   border-radius: 5px;
+   background-color: lightgray;
+   -webkit-animation: infinite bgcolorchange 4s;
+   animation: 3s infinite bgcolorchange;
+  opacity: 0.5;
+}
+.p-text{
+padding: 0px;
+margin: 0px;
+color:black;
+}
+.p-points-text{
+ text-align: center;
+ color:#FFF;
+ font-size: 1.4rem;
+}
+.icon-style{
+    font-size: 1.0rem;
+    padding-top: 5px;
+    color:black;
+    font-family: "Loto-Regular"
+}
+.text-decor1
+{
+    width: 144px;
+    height: 15px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    background-color: lightgray;
+    -webkit-animation: infinite bgcolorchange 4s;
+    animation: 3s infinite bgcolorchange;
+   opacity: 0.5; 
+}
+.text-decor
+    {
+        width: 144px;
+        height: 21px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        background-color: lightgray;
+        -webkit-animation: infinite bgcolorchange 4s;
+        animation: 3s infinite bgcolorchange;
+       opacity: 0.5;
+    }
+    .animate-imagebox
+    {
+        border-radius: 15px;
+        height: 80px;
+        background-color: lightgrey;
+        -webkit-animation: infinite bgcolorchange 4s;
+        animation: 3s infinite bgcolorchange;
+       opacity: 0.5;
+    }
+}
